@@ -2,10 +2,8 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
-def index(request):
+def ind(request):
     return HttpResponse('<h1>Hello, World!</h1>')
     
-def ind(request):
-    return render(request, 'index.html', context={
-        'who': 'World',
-    })
+def index(request):
+    return render(request, 'index.html')
