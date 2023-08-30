@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-30 22:12+0300\n"
+"POT-Creation-Date: 2023-08-30 22:49+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-
 #: task_manager/users/forms.py:10
 msgid "Email"
 msgstr "Электронная почта"
@@ -33,8 +32,6 @@ msgid "Last name"
 msgstr "Фамилия"
 
 #: task_manager/users/forms.py:25 templates/login.html:17
-#, fuzzy
-#| msgid "User name"
 msgid "Username"
 msgstr "Имя пользователя"
 
@@ -51,7 +48,6 @@ msgid "User name"
 msgstr "Имя пользователя"
 
 #: task_manager/users/templates/users/index.html:11
-#, fuzzy
 msgid "Full name"
 msgstr "Полное имя"
 
@@ -64,9 +60,8 @@ msgid "Сheck the correctness of the entered data"
 msgstr "Проверьте корректность введенных данных"
 
 #: task_manager/users/templates/users/register.html:31
-#, fuzzy
 msgid "Sign up"
-msgstr "Регистрация"
+msgstr "Зарегистрироваться"
 
 #: task_manager/users/views.py:28 task_manager/users/views.py:41
 msgid "Registration"
@@ -103,16 +98,12 @@ msgstr "Пользователи"
 
 #: templates/navigation.html:14
 msgid "About"
-msgstr "О проекте"
+msgstr "О нас"
 
 #: templates/navigation.html:18
-#, fuzzy
 msgid "Sign-in"
 msgstr "Вход"
 
 #: templates/navigation.html:19
 msgid "Sign-up"
 msgstr "Регистрация"
-
-#~ msgid "Hello, Pikachu!"
-#~ msgstr "Привет, Пикачу!"
