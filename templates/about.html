@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+
+<h1> {{title}} </h1>
+<p> {% translate "Created by ferummm"%} 
+    (<a class="" href="{{github}}">github</a>
+    , 
+    <a class="" href="{{tg}}">telegram</a>
+    , 
+    <a class="" href="{{vk}}">vk</a>) 
+</p>
+<p> {% translate "This project was created as part of the study of web development on Django" %} </p>
+{% endblock %}

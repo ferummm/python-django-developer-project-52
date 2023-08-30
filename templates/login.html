@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+
+
+
+<br>
+<br>
+<div class="h-100 d-flex align-items-center justify-content-center"> 
+    <div class="shadow p-4 mb-5 bg-body rounded " >
+        
+        <h2>{% translate "Login" %}</h2>
+		<form action="" method=POST>
+			{% csrf_token %}
+
+            <div class="mb-3">
+                <label class="form-label">{% translate "Username" %}</label>
+                <input type="text" class="form-control" name="username">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">{% translate "Password" %}</label>
+                <input type="password" class="form-control" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">{% translate "Sign in" %}</button>
+	    </form>
+        <br>
+    </div>
+</div>
+{% endblock %}

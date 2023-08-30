@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-16 18:24+0300\n"
+"POT-Creation-Date: 2023-08-30 22:12+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,13 +19,79 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: task_manager/users/forms.py:10
+msgid "Email"
+msgstr "Электронная почта"
+
+#: task_manager/users/forms.py:12
+msgid "First name"
+msgstr "Имя"
+
+#: task_manager/users/forms.py:14
+msgid "Last name"
+msgstr "Фамилия"
+
+#: task_manager/users/forms.py:25 templates/login.html:17
+#, fuzzy
+#| msgid "User name"
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: task_manager/users/forms.py:28 templates/login.html:21
+msgid "Password"
+msgstr "Пароль"
+
+#: task_manager/users/forms.py:31
+msgid "Password confirmation"
+msgstr "Подтверждение пароля"
+
+#: task_manager/users/templates/users/index.html:10
+msgid "User name"
+msgstr "Имя пользователя"
+
+#: task_manager/users/templates/users/index.html:11
+#, fuzzy
+msgid "Full name"
+msgstr "Полное имя"
+
+#: task_manager/users/templates/users/index.html:12
+msgid "Creation date"
+msgstr "Дата регистрации"
+
+#: task_manager/users/templates/users/register.html:11
+msgid "Сheck the correctness of the entered data"
+msgstr "Проверьте корректность введенных данных"
+
+#: task_manager/users/templates/users/register.html:31
+#, fuzzy
+msgid "Sign up"
+msgstr "Регистрация"
+
+#: task_manager/users/views.py:28 task_manager/users/views.py:41
+msgid "Registration"
+msgstr "Регистрация"
+
+#: templates/about.html:6
+msgid "Created by ferummm"
+msgstr "Автор: ferummm"
+
+#: templates/about.html:13
+msgid ""
+"This project was created as part of the study of web development on Django"
+msgstr "Проект создан в рамках изучения веб-разработки на Django"
+
 #: templates/base.html:9
 msgid "Task Manager"
 msgstr "Менеджер задач"
 
-#: templates/index.html:5
-msgid "Hello, Pikachu!"
-msgstr "Привет, Пикачу!"
+#: templates/login.html:12
+msgid "Login"
+msgstr "Вход"
+
+#: templates/login.html:24
+msgid "Sign in"
+msgstr "Войти"
 
 #: templates/navigation.html:12
 msgid "Home"
@@ -40,9 +106,13 @@ msgid "About"
 msgstr "О проекте"
 
 #: templates/navigation.html:18
-msgid "Login"
-msgstr "Войти"
+#, fuzzy
+msgid "Sign-in"
+msgstr "Вход"
 
 #: templates/navigation.html:19
 msgid "Sign-up"
 msgstr "Регистрация"
+
+#~ msgid "Hello, Pikachu!"
+#~ msgstr "Привет, Пикачу!"

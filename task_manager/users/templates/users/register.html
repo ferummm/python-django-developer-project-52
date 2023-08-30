@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<style>
+    .errors ul li 
+    { list-style: none; } 
+</style>
+
+{% if form.errors %}
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {% translate "Сheck the correctness of the entered data" %}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+{% endif %}	
+
+<div class="h-100 d-flex align-items-center justify-content-center "> 
+    <div class="shadow p-4 mb-5 bg-body rounded w-50" >
+        <h1>{{title}}</h1>
+        <br>
+        <form method="post" class="row g-3">
+            {% csrf_token %}
+            {% for field in form%}
+            
+                    <div><label class="form-label">{{field.label}} </label>{{field}}</div>
+                    
+                    <div class="errors" style="color: coral; font-size:0,8em; margin-top: -0.5%;">{{field.errors}}</div>
+                    <div class="text-muted" style="font-style: italic;font-size:0.8em; margin-top: -0.5%;" >{{field.help_text}}</div>    
+                    
+                {% endfor %}
+            <button type="submit" class="btn btn-primary w-100">{% translate "Sign up" %}</button>
+        </form>
+        <br><br>
+    </div>
+</div>
+
+{% endblock %}
