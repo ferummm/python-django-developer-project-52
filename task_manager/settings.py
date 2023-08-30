@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv("DEBUG")
 
 ALLOWED_HOSTS = ['.railway.app', '127.0.0.1', 'webserver']
-
+CSRF_TRUSTED_ORIGINS = ['https://task-manager-django-production.up.railway.app']
 
 # Application definition
 
