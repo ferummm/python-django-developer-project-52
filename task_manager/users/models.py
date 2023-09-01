@@ -3,8 +3,8 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
-class TimestampedModel(models.Model):
-    """An abstract model with a pair of timestamps."""
+""" class TimestampedModel(models.Model):
+    #An abstract model with a pair of timestamps.
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -14,4 +14,5 @@ class TimestampedModel(models.Model):
 
 
 class UserModel(User, TimestampedModel):
-    """A task manager user."""
+    #A task manager user.
+ """
