@@ -8,14 +8,15 @@ from django.utils.translation import gettext as _
 
 # Create your views here.
 
+
 class IndexView(View):
 
-    template_name="users/index.html"
+    template_name = "users/index.html"
 
     def get(self, request, *args, **kwargs):
         users = User.objects.all()
         return render(request, self.template_name, context={'users': users})
-    
+
 
 class RegistrationFormView(View):
     form_class = RegisterForm
@@ -23,12 +24,12 @@ class RegistrationFormView(View):
 
     def get(self, request, *args, **kwargs):
         form = self.form_class(auto_id=False)
-        
+
         return render(request, self.template_name, context={'form': form,
-                                                    'title': _("Registration")})
-    
+                                                            'title': _("Registration")})
+
     def post(self, request, *args, **kwargs):
-        form = self.form_class(request.POST,auto_id=False)
+        form = self.form_class(request.POST, auto_id=False)
         if form.is_valid():
             form.save()
             username = form.cleaned_data['username']

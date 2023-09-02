@@ -35,20 +35,20 @@ CSRF_TRUSTED_ORIGINS = ['https://task-manager-django-production.up.railway.app']
 
 INSTALLED_APPS = [
     'task_manager',
-    'task_manager.users.apps.UsersConfig', #
+    'task_manager.users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_bootstrap5', #
+    'django_bootstrap5',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    #'django.middleware.locale.LocaleMiddleware', #
+    # 'django.middleware.locale.LocaleMiddleware', #
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -61,7 +61,7 @@ ROOT_URLCONF = 'task_manager.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'], #
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -89,7 +89,9 @@ if DEBUG:
     }
 else:
     DATABASES = {
-        'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1800, conn_health_checks=True),
+        'default': dj_database_url.config(default=DATABASE_URL,
+                                          conn_max_age=1800,
+                                          conn_health_checks=True),
     }
 
 # Password validation
@@ -115,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 
-LOCALE_PATHS = [ BASE_DIR / 'locale',]
+LOCALE_PATHS = [BASE_DIR / 'locale', ]
 
 LANGUAGE_CODE = os.getenv("LANGUAGE_CODE", 'ru')
 TIME_ZONE = 'UTC'

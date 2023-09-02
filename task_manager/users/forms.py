@@ -1,18 +1,22 @@
 from typing import Any
 from django import forms
-from django import forms 
-from django.contrib.auth.models import User 
-from django.contrib.auth.forms import UserCreationForm 
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
 from django.utils.translation import gettext as _
 
 
 class RegisterForm(UserCreationForm):
-    email = forms.EmailField(required=True, label=_('Email'), 
-                             widget=forms.EmailInput(attrs={'class':'form-control'}))
-    first_name = forms.CharField(required=True, label=_('First name'), min_length=1, max_length=50, 
-                                 widget=forms.TextInput(attrs={'class':'form-control'}))
-    last_name = forms.CharField(required=True, label=_('Last name'), min_length=1, max_length=50,
-                                 widget=forms.TextInput(attrs={'class':'form-control'})) 
+    email = forms.EmailField(required=True, label=_('Email'),
+                             widget=forms.EmailInput(attrs={'class': 'form-control'}))
+    first_name = forms.CharField(required=True,
+                                 label=_('First name'),
+                                 min_length=1, max_length=50,
+                                 widget=forms.TextInput(attrs={'class': 'form-control'}))
+    last_name = forms.CharField(required=True,
+                                label=_('Last name'),
+                                min_length=1,
+                                max_length=50,
+                                widget=forms.TextInput(attrs={'class': 'form-control'}))
 
     class Meta:
         model = User
@@ -29,5 +33,3 @@ class RegisterForm(UserCreationForm):
 
         self.fields['password2'].widget.attrs['class'] = 'form-control'
         self.fields['password2'].label = _('Password confirmation')
-        
-    
