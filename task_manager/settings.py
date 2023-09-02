@@ -23,10 +23,10 @@ load_dotenv(os.path.join(BASE_DIR, ".env"))
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.getenv("DEBUG"))
+DEBUG = bool(os.environ["DEBUG"])
 
 ALLOWED_HOSTS = ['.railway.app', '127.0.0.1', 'webserver']
 CSRF_TRUSTED_ORIGINS = ['https://task-manager-django-production.up.railway.app']
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'task_manager.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = os.environ["DATABASE_URL"]
 if DEBUG:
     DATABASES = {
         'default': {
@@ -95,6 +95,7 @@ else:
     }
 print(type(DEBUG), DEBUG)
 print(DATABASES['default']['NAME'])
+print(os.environ['LANGUAGE_CODE'])
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -120,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LOCALE_PATHS = [BASE_DIR / 'locale', ]
 
-LANGUAGE_CODE = os.getenv("LANGUAGE_CODE", 'ru')
+LANGUAGE_CODE = os.environ["LANGUAGE_CODE"]
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
