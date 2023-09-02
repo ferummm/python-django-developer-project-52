@@ -94,6 +94,8 @@ else:
                                           conn_health_checks=True),
     }
 print(type(DEBUG), DEBUG)
+print(os.environ["DEBUG"])
+print(os.environ["DATABASE_URL"])
 print(DATABASES['default']['NAME'])
 print(os.environ['LANGUAGE_CODE'])
 # Password validation
