@@ -26,7 +26,7 @@ load_dotenv(os.path.join(BASE_DIR, ".env"))
 SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ["DEBUG"])
+DEBUG = os.environ["DEBUG"] == "True"
 
 ALLOWED_HOSTS = ['.railway.app', '127.0.0.1', 'webserver']
 CSRF_TRUSTED_ORIGINS = ['https://task-manager-django-production.up.railway.app']
