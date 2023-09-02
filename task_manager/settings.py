@@ -93,7 +93,7 @@ else:
                                           conn_max_age=1800,
                                           conn_health_checks=True),
     }
-
+print(DATABASES['default']['NAME'])
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
